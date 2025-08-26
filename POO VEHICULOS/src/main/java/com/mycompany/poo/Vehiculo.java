@@ -1,4 +1,4 @@
-ppackage final_grupo_02.clases;
+package transporte_sur.clases;
 
 public class Vehiculo {
     private String codigo;
@@ -35,17 +35,5 @@ public class Vehiculo {
     public String getDueño() { return dueño; }
     public void setDueño(String dueño) { this.dueño = dueño; }
 
-    // Métodos de utilidad
     @Override
-    public String toString() {
-        return placa + " - " + marcaModelo();
-    }
-
-    private String marcaModelo() {
-        return codigo + " / " + color;
-    }
-
-    public String toCsvString() {
-        return codigo + ";" + placa + ";" + numeroSerie + ";" + añoDeFabricacion + ";" + color + ";" + cantidadPuertas + ";" + cilindrada + ";" + dueño;
-    }
-}
+    publi
