@@ -8,8 +8,8 @@ public class Vehiculo {
     private String color;
     private int cantidadPuertas;
     private double cilindrada;
-    private String dueño;
-
+    private Cliente dueño;
+    private PlanMantenimiento plan;
 
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
@@ -32,8 +32,18 @@ public class Vehiculo {
     public double getCilindrada() { return cilindrada; }
     public void setCilindrada(double cilindrada) { this.cilindrada = cilindrada; }
 
-    public String getDueño() { return dueño; }
-    public void setDueño(String dueño) { this.dueño = dueño; }
+    public Cliente getDueño() { return dueño; }
+    public void setDueño(Cliente dueño) { this.dueño = dueño; }
+
+    public PlanMantenimiento getPlan() { return plan; }
+    public void setPlan(PlanMantenimiento plan) { this.plan = plan; }
 
     @Override
-    publi
+    public String toString() {
+        return placa + " (" + color + ") - Dueño: " + (dueño != null ? dueño.getNombres() : "Sin dueño");
+    }
+
+    public String toCsvString() {
+        return codigo + ";" + placa + ";" + numeroSerie + ";" + añoDeFabricacion + ";" + color + ";" + cantidadPuertas + ";" + cilindrada + ";" + (dueño != null ? dueño.getCodigo() : "");
+    }
+}
