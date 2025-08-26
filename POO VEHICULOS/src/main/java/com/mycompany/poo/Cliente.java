@@ -9,7 +9,6 @@ public class Cliente {
     private String correo;
     private String celular;
 
-    // Getters y Setters
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
 
