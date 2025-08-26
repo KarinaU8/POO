@@ -10,7 +10,7 @@ public class Vehiculo {
     private double cilindrada;
     private String dueño;
 
-    // Getters y Setters
+
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
 
