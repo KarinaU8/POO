@@ -1,5 +1,7 @@
 package transporte_sur.clases;
 
+import java.util.ArrayList;
+
 public class Cliente {
     private String codigo;
     private String nombres;
@@ -8,6 +10,7 @@ public class Cliente {
     private String sexo;
     private String correo;
     private String celular;
+    private ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
@@ -30,13 +33,15 @@ public class Cliente {
     public String getCelular() { return celular; }
     public void setCelular(String celular) { this.celular = celular; }
 
+    public ArrayList<Vehiculo> getVehiculos() { return vehiculos; }
+    public void addVehiculo(Vehiculo v) { vehiculos.add(v); }
+
     @Override
     public String toString() {
-        return codigo + " - " + nombres + " " + apellidos;
+        return codigo + " - " + nombres + " " + apellidos + " | Vehículos: " + vehiculos.size();
     }
 
     public String toCsvString() {
         return codigo + ";" + nombres + ";" + apellidos + ";" + direccion + ";" + sexo + ";" + correo + ";" + celular;
     }
 }
-
