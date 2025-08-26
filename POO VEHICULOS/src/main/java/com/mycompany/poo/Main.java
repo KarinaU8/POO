@@ -1,85 +1,21 @@
-package com.mycompany.poo;
+package transporte_sur;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import transporte_sur.clases.*;
 
-public class PlanMantenimiento {
-    private String codigoMantenimiento;
-    private String datosDelTecnico;
-    private String tipoMantenimiento;
-    private String datosVehiculo;
-    private int kilometraje;
-    private String falla;
-    private String fecha;
-    private double costo;
+public class Main {
+    public static void main(String[] args) {
+        // Ejemplo de prueba
+        Cliente cliente = new Cliente();
+        cliente.setCodigo("C001");
+        cliente.setNombres("Juan");
+        cliente.setApellidos("Perez");
 
-    private static final String NOMBRE_ARCHIVO = "planes_mantenimiento.txt";
+        Vehiculo vehiculo = new Vehiculo();
+        vehiculo.setCodigo("V001");
+        vehiculo.setPlaca("ABC-123");
+        vehiculo.setColor("Rojo");
 
-    public PlanMantenimiento(String codigoMantenimiento, String datosDelTecnico, String tipoMantenimiento,
-                             String datosVehiculo, int kilometraje, String falla, String fecha, double costo) {
-        this.codigoMantenimiento = codigoMantenimiento;
-        this.datosDelTecnico = datosDelTecnico;
-        this.tipoMantenimiento = tipoMantenimiento;
-        this.datosVehiculo = datosVehiculo;
-        this.kilometraje = kilometraje;
-        this.falla = falla;
-        this.fecha = fecha;
-        this.costo = costo;
+        System.out.println(cliente);
+        System.out.println(vehiculo);
     }
-
-    public String getCodigoMantenimiento() {
-        return codigoMantenimiento;
-    }
-    public void setCodigoMantenimiento(String codigoMantenimiento) {
-        this.codigoMantenimiento = codigoMantenimiento; 
-    }
-
-    public String getDatosDelTecnico() {
-        return datosDelTecnico; 
-    }
-    public void setDatosDelTecnico(String datosDelTecnico) {
-        this.datosDelTecnico = datosDelTecnico; 
-    }
-
-    public String getTipoMantenimiento() {
-        return tipoMantenimiento;
-    }
-    public void setTipoMantenimiento(String tipoMantenimiento) {
-        this.tipoMantenimiento = tipoMantenimiento; 
-    }
-
-    public String getDatosVehiculo() {
-        return datosVehiculo; 
-    }
-    public void setDatosVehiculo(String datosVehiculo) {
-        this.datosVehiculo = datosVehiculo; 
-    } 
-
-    public int getKilometraje() {
-        return kilometraje; 
-    }
-    public void setKilometraje(int kilometraje) {
-        this.kilometraje = kilometraje;
-    }
-
-    public String getFalla() { 
-        return falla;
-    }
-    public void setFalla(String falla) {
-        this.falla = falla; 
-    }
-
-    public String getFecha() {
-        return fecha; 
-    }
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
-    public double getCosto() {
-        return costo; 
-    }
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
+}
