@@ -10,7 +10,7 @@ public class PlanMantenimiento {
     private String fecha;
     private double costo;
 
-    // Getters y Setters
+
     public String getCodigoMantenimiento() { return codigoMantenimiento; }
     public void setCodigoMantenimiento(String codigoMantenimiento) { this.codigoMantenimiento = codigoMantenimiento; }
 
