@@ -1,5 +1,7 @@
 package transporte_sur.clases;
 
+import java.util.ArrayList;
+
 public class Tecnico {
     private String codigo;
     private String nombres;
@@ -10,7 +12,7 @@ public class Tecnico {
     private String celular;
     private String especialidad;
     private int tiempoServicio;
-
+    private ArrayList<PlanMantenimiento> planes = new ArrayList<>();
 
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
@@ -38,6 +40,9 @@ public class Tecnico {
 
     public int getTiempoServicio() { return tiempoServicio; }
     public void setTiempoServicio(int tiempoServicio) { this.tiempoServicio = tiempoServicio; }
+
+    public ArrayList<PlanMantenimiento> getPlanes() { return planes; }
+    public void addPlan(PlanMantenimiento p) { planes.add(p); }
 
     @Override
     public String toString() {
