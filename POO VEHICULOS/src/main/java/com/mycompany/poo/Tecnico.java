@@ -11,7 +11,7 @@ public class Tecnico {
     private String especialidad;
     private int tiempoServicio;
 
-    // Getters y Setters
+
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
 
