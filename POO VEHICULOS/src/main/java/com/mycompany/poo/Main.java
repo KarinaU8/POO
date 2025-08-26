@@ -4,7 +4,7 @@ import transporte_sur.clases.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Ejemplo de prueba
+        
         Cliente cliente = new Cliente();
         cliente.setCodigo("C001");
         cliente.setNombres("Juan");
